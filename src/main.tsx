@@ -1,0 +1,20 @@
+import './index.css'
+import 'react-toastify/dist/ReactToastify.min.css'
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
+
+import { store } from '~/store'
+
+import { App } from './App.tsx'
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+      <ToastContainer />
+    </Provider>
+  </React.StrictMode>
+)
